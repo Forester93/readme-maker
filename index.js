@@ -15,7 +15,8 @@ let buildPage = function (
   usage,
   projectTitle,
   repository,
-  relativeLinkScreenshot
+  relativeLinkScreenshot,
+  test
 ) {
   function buildList() {
     if (languages == null || languages.length == 0) return "";
@@ -35,6 +36,14 @@ let buildPage = function (
         return "[![License: IPL 1.0](https://img.shields.io/badge/License-IPL%201.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)";
       case "Perl":
         "[![License: Artistic-2.0](https://img.shields.io/badge/License-Perl-0298c3.svg)](https://opensource.org/licenses/Artistic-2.0)";
+    }
+  }
+  function screenshot() {
+    if (relativeLinkScreenshot == "") {
+      return "";
+    } else {
+      return `### Screenshot of the Application
+        ![Screenshot of the page](${relativeLinkScreenshot})`;
     }
   }
   let page = `
@@ -73,6 +82,8 @@ ${buildList()}
 
 ### Test
 
+${test}
+
 ## Links
 
 ### Link to the Deployed Application
@@ -82,8 +93,7 @@ ${buildList()}
 
 [${projectTitle} Github Repo](https://github.com/${git}/${repository}/)
 
-### Screenshot of the Application
-![Screenshot of the page](${relativeLinkScreenshot})
+${screenshot()}
 
 ## Questions
 
@@ -154,7 +164,7 @@ inquirer
         "AngularJS",
         "React",
         "MongoDB",
-        "Third Parties APIs",
+        "Third-party APIs",
       ],
       name: "languages",
     },
@@ -171,8 +181,15 @@ inquirer
     },
     {
       type: "input",
-      message: "Please provide installation instructions: ",
+      message:
+        "What is the NodeJS command line required to install your application",
       name: "installation",
+    },
+    {
+      type: "input",
+      message:
+        "What is the NodeJS command line required to test your application",
+      name: "test",
     },
     {
       type: "input",
@@ -181,7 +198,6 @@ inquirer
     },
   ])
   .then((response) => {
-    console.log(response);
     fs.writeFile(
       `./README.md`,
       buildPage(
@@ -197,10 +213,16 @@ inquirer
         response.usage,
         response.title,
         response.repository,
-        response.relativeLinkScreenshot
+        response.relativeLinkScreenshot,
+        response.test
       ),
       (err) => {
         if (err) console.error(err);
       }
     );
+    console.log("Markdown File Written Successfully");
+  })
+  .catch((err) => {
+    console.log("Something went wrong\n");
+    console.error(err);
   });
