@@ -71,7 +71,9 @@ npm test
 
 ### Screenshot of the Application
 
-![Screenshot of the page](./assets/images/screenshot.PNG)
+![Screenshot of the application running](./assets/images/screenshot.PNG)
+
+![Screenshot of a sample README result](./assets/images/sample-readme.PNG)
 
 ## Questions
 
