@@ -51,17 +51,13 @@ npm test
 
 ## Links
 
-### Link to the Deployed Application
-
-[The README Maker Deployed Webpage](https://forester93.github.io/readme-maker/)
-
 ### Link to the Github Repository
 
 [The README Maker Github Repo](https://github.com/forester93/readme-maker/)
 
 ### Screenshot of the Application
 
-![Screenshot of the page](\assets\images\screenshot.png)
+![Screenshot of the page](https://github.com/Forester93/readme-maker/blob/main/assets/images/screenshot.PNG)
 
 ## Questions
 
