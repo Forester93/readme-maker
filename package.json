@@ -1,0 +1,30 @@
+{
+  "name": "readme-maker",
+  "version": "1.0.0",
+  "description": "This is a NodeJS programme that helps user generate a high-quality README.md for their projects.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Forester93/readme-maker.git"
+  },
+  "keywords": [
+    "README.md",
+    "markdown",
+    "mark-down",
+    "README",
+    "Generator",
+    "NODEJS"
+  ],
+  "author": "Mark Forester",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Forester93/readme-maker/issues"
+  },
+  "homepage": "https://github.com/Forester93/readme-maker#readme",
+  "dependencies": {
+    "inquirer": "^8.0.0"
+  }
+}

@@ -1,1 +1,56 @@
-# readme-maker
+# The README Maker
+
+MIT<br>[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+## Contents
+
+• [Description](#description)  
+• [Usage](#usage)  
+• [Installation](#installation)  
+• [Languages](#languages)  
+• [License](#license)  
+• [Contributions](#contributions)  
+• [Test](#test)  
+• [Links](#links)  
+• [Questions](#questions)
+
+## Description
+
+This is an application to quickly develop a README.md markdown file.
+
+### Usage
+
+You need to open the application through command-line using the command 'node index'
+
+### Installation
+
+use "npm i"
+
+### Languages
+
+• JavaScript  
+• NodeJS
+
+### Test
+
+## Links
+
+### Link to the Deployed Application
+
+[The README Maker Deployed Webpage](https://undefined.github.io/readme-maker/)
+
+### Link to the Github Repository
+
+[The README Maker Github Repo](https://github.com/undefined/readme-maker/)
+
+### Screenshot of the Application
+
+![Screenshot of the page](./assets/images/screenshot.png)
+
+## Questions
+
+You can reach out to me over one of the following for any questions about this application.
+
+| Name          | Email                    | Phone Numer  | GitHubProfile                                                 |
+| ------------- | ------------------------ | ------------ | ------------------------------------------------------------- |
+| Mark Forester | markforester93@gmail.com | 0404-831-362 | [Mark Forester Github Profile](https://github.com/undefined/) |
