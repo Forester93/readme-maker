@@ -44,7 +44,8 @@ let buildPage = function (
       return "";
     } else {
       return `### Screenshot of the Application
-        ![Screenshot of the page](${relativeLinkScreenshot})`;
+
+    ![Screenshot of the page](${relativeLinkScreenshot})`;
     }
   }
   let page = `
@@ -71,10 +72,17 @@ ${description}
 
 ### Usage
 
+To run the application you need to run the following command line:
+
+\`\`\`
 ${usage}
+\`\`\`
 
 ### Installation
-\`\`\`
+
+To install the application you need to run the following command line:
+
+\`\`\`bash
 ${installation}
 \`\`\`
 
@@ -83,7 +91,10 @@ ${installation}
 ${buildList()}
 
 ### Test
-\`\`\`
+
+To test the application you need to run the following command line:
+
+\`\`\`bash
 ${test}
 \`\`\`
 
@@ -226,7 +237,7 @@ inquirer
         response.license,
         response.installation,
         response.languages,
-        response.githubHandle,
+        response.git,
         response.description,
         response.usage,
         response.title,
