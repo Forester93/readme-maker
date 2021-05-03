@@ -16,7 +16,8 @@ let buildPage = function (
   projectTitle,
   repository,
   relativeLinkScreenshot,
-  test
+  test,
+  contributing
 ) {
   function buildList() {
     if (languages == null || languages.length == 0) return "";
@@ -59,7 +60,7 @@ let buildPage = function (
 • [Installation](#installation)
 • [Languages](#languages)
 • [License](#license)
-• [Contributions](#contributions)
+• [Contributors](#contributors)
 • [Test](#test)
 • [Links](#links)
 • [Questions](#questions)
@@ -73,16 +74,18 @@ ${description}
 ${usage}
 
 ### Installation
-
+\`\`\`
 ${installation}
+\`\`\`
 
-### Languages
+### Technologies
 
 ${buildList()}
 
 ### Test
-
+\`\`\`
 ${test}
+\`\`\`
 
 ## Links
 
@@ -104,6 +107,11 @@ You can reach out to me over one of the following for any questions about this a
 |${first} ${last}|${email}|${phoneNumber}|[${
     first + " " + last
   } Github Profile](https://github.com/${git}/)
+
+
+## Contributing
+
+${contributing}
 
       `;
 
@@ -154,7 +162,7 @@ inquirer
     },
     {
       type: "checkbox",
-      message: "What technologies do you use?",
+      message: "What technologies did you use?",
       choices: [
         "HTML",
         "CSS",
@@ -165,6 +173,7 @@ inquirer
         "React",
         "MongoDB",
         "Third-party APIs",
+        "Others",
       ],
       name: "languages",
     },
@@ -181,20 +190,29 @@ inquirer
     },
     {
       type: "input",
-      message:
-        "What is the NodeJS command line required to install your application",
+      message: "What is the command line required to install your application?",
       name: "installation",
     },
     {
       type: "input",
-      message:
-        "What is the NodeJS command line required to test your application",
+      message: "What is the command line required to test your application ?",
       name: "test",
     },
     {
       type: "input",
-      message: "Enter the relative link for the application's screenshot ",
+      message: "Enter the relative link for the application's screenshot: ",
       name: "relativeLinkScreenshot",
+    },
+    {
+      type: "input",
+      message:
+        "Enter the relative link for the application's screenshot: (Leave blank if inapplicable)",
+      name: "relativeLinkScreenshot",
+    },
+    {
+      type: "input",
+      message: "How can one contribute to this project?",
+      name: "contributing",
     },
   ])
   .then((response) => {
@@ -214,13 +232,14 @@ inquirer
         response.title,
         response.repository,
         response.relativeLinkScreenshot,
-        response.test
+        response.test,
+        response.contributing
       ),
       (err) => {
         if (err) console.error(err);
       }
     );
-    console.log("Markdown File Written Successfully");
+    console.log("Markdown File Generated Successfully");
   })
   .catch((err) => {
     console.log("Something went wrong\n");
