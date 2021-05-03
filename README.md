@@ -8,7 +8,7 @@
 
 • [License](#license)
 • [Description](#description)
-• [Pre-requisites]](#pre-requisites)
+• [Pre-requisites](#pre-requisites)
 • [Usage](#usage)
 • [Installation](#installation)
 • [Technologies](#technologies)
