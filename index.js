@@ -1,7 +1,10 @@
+// get important packages
+
 const inquirer = require("inquirer");
 const fs = require("fs");
 const Choices = require("inquirer/lib/objects/choices");
 
+// to build the body of the readme file
 let buildPage = function (
   first,
   last,
@@ -19,6 +22,7 @@ let buildPage = function (
   test,
   contributing
 ) {
+  //list of technologies used
   function buildList() {
     if (languages == null || languages.length == 0) return "";
     let listString = "";
@@ -27,6 +31,7 @@ let buildPage = function (
     }
     return `${listString}`;
   }
+  //license
   function badge() {
     switch (badges) {
       case "Apache":
@@ -39,6 +44,7 @@ let buildPage = function (
         "[![License: Artistic-2.0](https://img.shields.io/badge/License-Perl-0298c3.svg)](https://opensource.org/licenses/Artistic-2.0)";
     }
   }
+  //screenshot link
   function screenshot() {
     if (relativeLinkScreenshot == "") {
       return "";
@@ -127,6 +133,7 @@ ${contributing}
   return page;
 };
 
+//getting the required information from the user
 inquirer
   .prompt([
     {
@@ -226,6 +233,7 @@ inquirer
   ])
   .then((response) => {
     fs.writeFile(
+      //writing the README.md file
       `./README.md`,
       buildPage(
         response.firstName,
@@ -248,8 +256,8 @@ inquirer
         if (err) console.error(err);
       }
     );
-    console.log("Markdown File Generated Successfully");
-  })
+    console.log("Markdown File Generated Successfully"); //success prompt
+  }) //catching errors
   .catch((err) => {
     console.log("Something went wrong\n");
     console.error(err);

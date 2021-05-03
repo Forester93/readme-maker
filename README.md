@@ -8,6 +8,7 @@
 
 • [License](#license)
 • [Description](#description)
+• [Pre-requisites]](#pre-requisites)
 • [Usage](#usage)
 • [Installation](#installation)
 • [Technologies](#technologies)
@@ -18,7 +19,12 @@
 
 ## Description
 
-This is an application to quickly develop a README Markdown files for your project.
+This is an application to quickly develop a README Markdown files for your projects so that you can have more time coding.
+
+## Pre-requisites
+
+• Git Bash or VSCode Command line or Similar installed on your system.  
+• NodeJS installed on your system.
 
 ### Usage
 
@@ -55,9 +61,13 @@ npm test
 
 [The README Maker Github Repo](https://github.com/forester93/readme-maker/)
 
+### Video Tutorial to Run the Application
+
+[Video Tutorial to Run the Application](https://drive.google.com/file/d/1X3BBRRSoSYuGzYdHcTewfOAO3Ur8Km-6/view?usp=sharing)
+
 ### Screenshot of the Application
 
-![Screenshot of the page](https://github.com/Forester93/readme-maker/blob/main/assets/images/screenshot.PNG)
+![Screenshot of the page](./assets/images/screenshot.PNG)
 
 ## Questions
 
