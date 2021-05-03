@@ -1,4 +1,4 @@
-# The README Maker.
+# The README Maker
 
 ## License
 
