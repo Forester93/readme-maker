@@ -43,9 +43,7 @@ let buildPage = function (
     if (relativeLinkScreenshot == "") {
       return "";
     } else {
-      return `### Screenshot of the Application
-
-    ![Screenshot of the page](${relativeLinkScreenshot})`;
+      return `### Screenshot of the Application\n![Screenshot of the page](${relativeLinkScreenshot})`;
     }
   }
   let page = `
@@ -56,15 +54,15 @@ let buildPage = function (
 
 ## Contents
 
+• [License](#license)
 • [Description](#description)
 • [Usage](#usage)
 • [Installation](#installation)
-• [Languages](#languages)
-• [License](#license)
-• [Contributors](#contributors)
+• [Technologies](#technologies)
 • [Test](#test)
 • [Links](#links)
 • [Questions](#questions)
+• [Contributing](#contributing)
 
 ## Description
 
@@ -217,7 +215,7 @@ inquirer
     {
       type: "input",
       message:
-        "Enter the relative link for the application's screenshot: (Leave blank if inapplicable)",
+        "Enter the relative link for the application's screenshot (Leave blank if inapplicable): ",
       name: "relativeLinkScreenshot",
     },
     {
