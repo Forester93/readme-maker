@@ -12,7 +12,6 @@
 • [Usage](#usage)
 • [Installation](#installation)
 • [Technologies](#technologies)
-• [Test](#test)
 • [Links](#links)
 • [Questions](#questions)
 • [Contributing](#contributing)
