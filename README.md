@@ -47,14 +47,6 @@ npm i
 • JavaScript  
 • NodeJS
 
-### Test
-
-To test the application you need to run the following command line:
-
-```bash
-npm test
-```
-
 ## Links
 
 ### Link to the Github Repository
