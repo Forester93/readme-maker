@@ -64,7 +64,7 @@ npm i
 
 ![Screenshot of the application running](./assets/images/screenshot.PNG)
 
-![Screenshot of a sample README result](./assets/images/sample-readme.PNG)
+![Screenshot of a sample README result](./assets/images/sample-readme.png)
 
 ## Questions
 
