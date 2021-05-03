@@ -20,7 +20,7 @@
 
 This is an application to quickly develop a README Markdown files for your projects so that you can have more time coding.
 
-## Pre-requisites
+### Pre-requisites
 
 • Git Bash or VSCode Command line or Similar installed on your system.  
 • NodeJS installed on your system.
